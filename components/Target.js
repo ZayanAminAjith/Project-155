@@ -7,9 +7,9 @@ AFRAME.registerComponent("target-coin", {
         var id = `coin${i}`;
   
         //position variables     
-        var posX =(Math.random() * 200 + (-200));      
-        var posY = (Math.random() * 5 + (-1));
-        var posZ = (Math.random() * 200 + (-200));
+        var posX =(Math.random() * 100 + (-50));      
+        var posY = (Math.random() * 5 + 5);
+        var posZ = (Math.random() * 60 + (-40));
   
         var position = { x: posX, y: posY, z: posZ };
   
@@ -39,10 +39,10 @@ AFRAME.registerComponent("target-coin", {
     init: function(){
       for (var i = 1; i <= 20; i++) {
         var id = `fish${i}`
-  
-        var posX =(Math.random() * 200 + (-200));      
-        var posY = (Math.random() * 5 + (-1));
-        var posZ = (Math.random() * 200 + (-200));
+
+        var posX =(Math.random() * 100 + (-50));      
+        var posY = (Math.random() * 5 + 5);
+        var posZ = (Math.random() * 60 + (-40));
   
         var position = {x:posX,y:posY,z:posZ}
   
@@ -56,7 +56,7 @@ AFRAME.registerComponent("target-coin", {
       fishEl.setAttribute("position",position)
       fishEl.setAttribute("gltf-model","./assets/models/fish/scene.gltf")
       fishEl.setAttribute("animation-mixer",{})
-      fishEl.setAttribute("scale", {x:0.1,y:0.1,z:0.1})
+      fishEl.setAttribute("scale", {x:1,y:1,z:1})
       fishEl.setAttribute("static-body", {shape:"sphere",sphereRadius:3});
       fishEl.setAttribute("collision", {elementId:`#${id}`})
       var terrainEl = document.querySelector("#terrain")
